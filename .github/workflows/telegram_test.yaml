@@ -3,7 +3,7 @@ name: Telegram Test
 on:
   schedule:
     # Schedule to run every day at 1:20 PM UTC (6:50 PM IST)
-    - cron: '20 13 * * *'
+    - cron: '0 19 * * *'
   workflow_dispatch:
 jobs:
   run-telegram-test:
