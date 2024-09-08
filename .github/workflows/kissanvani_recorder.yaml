@@ -28,7 +28,7 @@ jobs:
         pip install beautifulsoup4 requests internetarchive pytz fpdf
 
     # Run the telegram_test.py script with secrets, with a timeout of 15 minutes for this step
-    - name: Run telegram_test.py
+    - name: Run radio.py The Main Program
       run: python radio.py city10
       env:
         KISANVANI_CH_ID: ${{ secrets.KISANVANI_CH_ID }}
