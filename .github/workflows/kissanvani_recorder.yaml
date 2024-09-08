@@ -3,7 +3,7 @@ name: Kissan Vani Recorder
 on:
   schedule:
     # Schedule to run every day at 1:20 PM UTC (6:50 PM IST)
-    - cron: '20 10 * * *'
+    - cron: '10 13 * * *'
   workflow_dispatch:
 jobs:
   run-telegram-test:
