@@ -3,7 +3,7 @@ name: Telegram Test
 on:
   schedule:
     # Schedule to run every day at 1:20 PM UTC (6:50 PM IST)
-    - cron: '0 19 * * *'
+    - cron: '0-59/10 17 * * *'
   workflow_dispatch:
 jobs:
   run-telegram-test:
@@ -26,7 +26,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ffmpeg  # Install ffmpeg
-        pip install beautifulsoup4 requests internetarchive pytz fpdf
+        pip install beautifulsoup4 requests internetarchive pytz fpdf lzlocal
 
     # Run the telegram_test.py script with secrets, with a timeout of 15 minutes for this step
     - name: Run telegram_test.py
