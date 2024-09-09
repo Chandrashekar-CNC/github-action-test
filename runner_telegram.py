@@ -2,7 +2,7 @@ import platform
 import requests, random, os
 from datetime import datetime
 import pytz
-import tzlocal
+
 
 
 token = os.environ.get('FORMER_RADIO_BOT')
@@ -32,15 +32,7 @@ sendMessage("test from github action")
 
 
 # Get the server's local timezone
-local_tz = tzlocal.get_localzone()
-
-# Get the current time in the server's local timezone
-server_time = datetime.now(local_tz)
-
-# Print the server's timezone and current date and time
-x = f"Server Timezone: {local_tz}\n\n"
-x += f"Server Date and Time: {server_time.strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
+x = ""
 # Convert the server time to Indian Standard Time (IST)
 ist_tz = pytz.timezone('Asia/Kolkata')
 ist_time = server_time.astimezone(ist_tz)
