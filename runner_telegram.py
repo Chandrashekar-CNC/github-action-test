@@ -29,19 +29,6 @@ def sendMessage(text):
             break
 sendMessage("test from github action")
 
-
-
-# Get the server's local timezone
-x = ""
-# Convert the server time to Indian Standard Time (IST)
-ist_tz = pytz.timezone('Asia/Kolkata')
-ist_time = server_time.astimezone(ist_tz)
-
-# Print the date and time in IST
-x += f"Indian Standard Time (IST): {ist_time.strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-sendMessage(str(x))
-
-
 y = "Runner Information:\n\n"
 y += f"Operating System: {platform.system()}\n\n"
 y += f"OS Version: {platform.release()}\n\n"
